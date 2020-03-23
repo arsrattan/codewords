@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "087970c6b67bf3973a7e4756512703bb",
+    "revision": "0f50db0fe4b47e3918c5f6e44513b588",
     "url": "/codewords/index.html"
   },
   {
-    "revision": "ba2b23eb97b75fa1c850",
-    "url": "/codewords/static/css/main.6aa6cfc3.chunk.css"
+    "revision": "e1765e11f85fadfde1b2",
+    "url": "/codewords/static/css/main.7505ac21.chunk.css"
   },
   {
     "revision": "6ff6011ec2ba03c595d5",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/codewords/static/js/2.7efca815.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ba2b23eb97b75fa1c850",
+    "revision": "e1765e11f85fadfde1b2",
     "url": "/codewords/static/js/main.cead68fc.chunk.js"
   },
   {
