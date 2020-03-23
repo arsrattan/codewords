@@ -1,6 +1,6 @@
 {
-  "homepage": "http://arsrattan.github.io/codenames",
-  "name": "qodenames",
+  "homepage": "http://arsrattan.github.io/codewords",
+  "name": "qodewords",
   "description": "A quarantine friendly codenames experience",
   "version": "0.1.0",
   "author": "Anmol Rattan <arsrattan@gmail.com>",
