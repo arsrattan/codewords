@@ -1,0 +1,19 @@
+.tileRow {
+    width: 98%;
+    margin-left: 1%;
+}
+
+.boardTiles {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.board {
+    padding-top: 1ch;
+}
+
+@media screen and (min-width: 768px) {
+    .board {
+        padding-top: 2.5ch;
+    }
+}

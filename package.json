@@ -1,0 +1,40 @@
+{
+  "homepage": "http://arsrattan.github.io/codenames",
+  "name": "qodenames",
+  "description": "A quarantine friendly codenames experience",
+  "version": "0.1.0",
+  "author": "Anmol Rattan <arsrattan@gmail.com>",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-scripts": "^3.4.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
