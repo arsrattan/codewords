@@ -1,0 +1,24 @@
+.input {
+    height: 6vw;
+    float: right;
+    margin-right: 2%;
+    border-radius: 19px;
+    border: 1px solid gray;
+    font-size: 4vw;
+    color: #404040;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+::placeholder {
+    font-size: 4vw;
+    color: #b5b5b5;
+}
+
+.input:hover::placeholder {
+    color: #404040;
+}
+
+.input:focus::placeholder {
+    color: #404040;
+}

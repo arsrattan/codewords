@@ -5,14 +5,21 @@
   "version": "0.1.0",
   "author": "Anmol Rattan <arsrattan@gmail.com>",
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "config": "^3.3.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "got": "^10.6.0",
+    "json5": "^2.1.2",
+    "random-words": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "typescript": "^3.8.3",
+    "util": "^0.12.2"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "build": "react-scripts build",

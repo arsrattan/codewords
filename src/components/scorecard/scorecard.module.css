@@ -1,0 +1,17 @@
+.scorecard {
+    text-align: center;
+    border-radius: 5px;
+    float: left;
+    margin-left: 1%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    padding: calc(1% + 0.2ch);
+}
+
+.scorecardText {
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+}

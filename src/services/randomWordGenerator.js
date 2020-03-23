@@ -1,4 +1,7 @@
-export default function generateRandomWords() {
+let randomWords = require('random-words');
+let config = require('config');
+
+export function getWords() {
     const randomWordJson = {
         apple: {
             definitions: [],
@@ -103,18 +106,4 @@ export default function generateRandomWords() {
     }
     
     return randomWordJson;
-}
-
-export function createColorList(blueFirst) {
-    let colorList = ['grey'];
-    for (let i = 0; i < 9; i++) {
-        colorList.push('#E8E889');
-    }
-    for (let i = 0; i < 8; i++) {
-        colorList.push('#83B1DE');
-        colorList.push('#F37472');
-    }
-    colorList.push(blueFirst ? '#83B1DE' : '#F37472');
-    colorList.sort(() => Math.random() - 0.5); // Shuffle list
-    return colorList;
 }

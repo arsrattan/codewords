@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './button.module.css';
+import styles from './spymasterButton.module.css';
 
-export class Button extends React.Component {
+export class SpymasterButton extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,11 +14,9 @@ export class Button extends React.Component {
     }
 
     buttonClickedColorChange() {
-        console.log(`Clicked b4: ${this.state.clicked}`);
         this.setState({
             clicked: !this.state.clicked
         })
-        console.log(`Clicked now: ${this.state.clicked}`);
     }
 
     buttonHoverColorChange() {
@@ -37,12 +35,10 @@ export class Button extends React.Component {
 
     render() {
         return(
-            <div>
-                <button className={styles.button} style={{backgroundColor: this.getBackgroundColor(), color: this.getTextColor()}} onClick={() => { this.props.onClick(); this.buttonClickedColorChange(); }} onMouseOver={() => this.buttonHoverColorChange()} onMouseLeave={() => this.buttonHoverColorChange()}>
-                    <div className={styles.buttonText}>
-                        {this.props.text}
-                    </div>
-                </button>
+            <div className={styles.button} style={{backgroundColor: this.getBackgroundColor(), color: this.getTextColor()}} onClick={() => { this.props.onClick(); this.buttonClickedColorChange(); }} onMouseOver={() => this.buttonHoverColorChange()} onMouseLeave={() => this.buttonHoverColorChange()}>
+                <div className={styles.buttonText}>
+                    {this.props.text}
+                </div>
             </div>
         )
     }

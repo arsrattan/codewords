@@ -1,5 +1,7 @@
 .headerContainer {
-    background-color: orange;
+    background-color: red;
     height: 2vh;
     text-align: center;
+    overflow: hidden;
+    display: block;
 }
