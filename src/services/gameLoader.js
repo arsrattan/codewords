@@ -1,5 +1,5 @@
-import { getWords } from './randomWordGenerator';
-import randomWords from 'random-words';
+import { getWords } from './wordsClient';
+import randomWords from 'random-words'
 
 export function calcHashCode(str) {
     return str.split("").reduce((a, b) => {
@@ -12,6 +12,7 @@ export function getWordsAtHashedIndexes(hashCode, wordList) {
     const wordListAtHashedIndexes = [];
     const fourteenBitStr = '11111111111111'
     const bitsInInt = 32;
+    const wordListCopy = Array.from(wordList);
 
     for(let i = 0; i < 25; i++) {
         const intFromBits = parseInt(fourteenBitStr, 2) << i;
@@ -25,9 +26,9 @@ export function getWordsAtHashedIndexes(hashCode, wordList) {
             intFromCircularBits = parseInt(circularBitStr, 2);
         }
         const bitsAsInt = intFromBits + intFromCircularBits;
-        const wordIndex = Math.abs(hashCode & bitsAsInt) % wordList.length;
-        wordListAtHashedIndexes.push(wordList[wordIndex]);
-        wordList.splice(wordIndex, 1);
+        const wordIndex = Math.abs(hashCode & bitsAsInt) % wordListCopy.length;
+        wordListAtHashedIndexes.push(wordListCopy[wordIndex]);
+        wordListCopy.splice(wordIndex, 1);
     }
 
     return wordListAtHashedIndexes;
@@ -48,8 +49,12 @@ export function getColorsAtHashedIndexes(hashCode) {
     return colorListAtHashedIndexes
 }
 
-export function generateBoardSetup(gameId) {
-    const wordList = Object.keys(getWords());
+export async function generateBoardSetup(gameId, providedWordList) {
+    let wordList = providedWordList;
+    if (providedWordList === undefined) {
+        wordList = await getWords();
+    }
+
     let startingWord = gameId;
     if (startingWord === undefined || startingWord === '') {
         startingWord = randomWords();
