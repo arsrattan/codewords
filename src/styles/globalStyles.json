@@ -1,0 +1,11 @@
+{
+    "blueCardColor": "#83B1DE",
+    "redCardColor": "#F37472",
+    "yellowCardColor": "#E8E889",
+    "greenCardColor": "#52AB6E",
+    "spymasterButtonSelectedColor": "#4f7567",
+    "spymasterButtonHoveringColor": "grey",
+    "spymasterButtonColor": "white",
+    "spymasterButtonTextColor": "black",
+    "spymasterButtonSelectedTextColor": "white"
+}

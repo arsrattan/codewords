@@ -1,26 +1,51 @@
-.tileRow {
-    width: 98%;
-    margin-left: 1%;
+.board {
+    --board-height: 100%;
+    --board-width: 100%;
+
+    position: absolute;
+    width: var(--board-width);
+    height: var(--board-height);
+}
+.boardHeader {
+    --header-padding-top: 1%;
+    --header-padding-bottom: 0.4%;
+    --header-margin-left: 2%;
+    --header-width: calc(100% - var(--header-margin-left) - var(--header-margin-left));
+    --header-height: 5%;
+
+    display: block;
+    overflow: hidden;
+    margin-left: var(--header-margin-left);
+    width: var(--header-width);
+    height: var(--header-height);
+    padding-top: 1%;
+    padding-bottom: var(--header-padding-bottom);
 }
 
 .boardTiles {
-    padding-top: 1%;
-    padding-bottom: 1%;
+    --tiles-margin-left: 2%;
+    --tiles-width: calc(100% - var(--tiles-margin-left) - var(--tiles-margin-left));
+    --tiles-height: calc(100% - 5% - 1% - 1%);
+    
+    margin-left: var(--tiles-margin-left);
+    width: var(--tiles-width);
+    height: var(--tiles-height);
 }
 
-.board {
-    padding-top: 1ch;
-}
+.tileRow {
+    --tile-row-height: 20%;
 
-.boardHeader {
-    width: 98%;
-    margin-left: 1%;
+    display: block;
     overflow: hidden;
-    padding-bottom: 1%;
+    height: var(--tile-row-height);
 }
 
-@media screen and (min-width: 768px) {
-    .board {
-        padding-top: 2.5ch;
-    }
+.scoreboard {
+    --scoreboard-width: 35%;
+    --scoreboard-height: 100%;
+
+    float: left;
+    margin-right: var(--scoreboard-margin-right);
+    width: var(--scoreboard-width);
+    height: var(--scoreboard-height);
 }

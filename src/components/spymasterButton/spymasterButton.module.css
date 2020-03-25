@@ -1,16 +1,46 @@
 .button {
-    border: solid gray 0.2ch;
-    text-align: center;
-    border-radius: 5px;
+    --spymaster-button-width: 25%;
+    --spymaster-button-height: calc(100% - 0.5ch - 0.5ch);
+    --spymaster-button-border-radius: 4ch;
+    --spymaster-border: solid grey 0.5ch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     float: left;
-    margin-left: 1%;
-    height: 100%;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    padding: 1%;
+    height: var(--spymaster-button-height);
+    width: var(--spymaster-button-width);
+    border-radius: var(--spymaster-button-border-radius);
+    border: var(--spymaster-border);
 }
 
 .buttonText {
-    font-size: 3.5vw;
+    --spymaster-button-font: 'Muli', sans-serif;
+
+    font-family: var(--spymaster-button-font);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 100px) {
+    .buttonText {
+        --spymaster-text-size: 5vw;
+
+        font-size: var(--spymaster-text-size);
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .buttonText {
+        --spymaster-text-size: 4vw;
+
+        font-size: var(--spymaster-text-size);
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .buttonText {
+        --spymaster-text-size: 3vw;
+
+        font-size: var(--spymaster-text-size);
+    }
 }

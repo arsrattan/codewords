@@ -1,3 +1,5 @@
-* {
-    background: whitesmoke;
+:root {
+    --blue-card-color: '#83B1DE';
+    --red-card-color: '#F37472';
+    --yellow-card-color: '#E8E889';
 }

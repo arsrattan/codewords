@@ -1,18 +1,42 @@
+.tileContainer {
+    --tile-container-width: 20%;
+    --tile-container-height: 100%;
+
+    float: left;
+    width: var(--tile-container-width);
+    height: var(--tile-container-height);
+}
+
 .tile {
-    width: 18%;
-    margin: 1%;
-    padding-top: 10%;
+    --tile-margin-left: 3%;
+    --tile-margin-right: 3%;
+    --tile-margin-top: 4%;
+    --tile-margin-bottom: 4%;
+    --tile-width: calc(100% - var(--tile-margin-left) - var(--tile-margin-right));
+    --tile-height: calc(100% - var(--tile-margin-top) - var(--tile-margin-bottom));
+    --tile-border-radius: 4px;
+    --tile-box-shadow-vertical-offset: 4px;
+    --tile-box-shadow-radius: 8px;
+    --tile-box-shadow-color: rgba(0, 0, 0, 0.3);
+    
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+    margin-left: var(--tile-margin-left);
+    margin-top: var(--tile-margin-top);
+    width: var(--tile-width);
+    height: var(--tile-height);
+    border-radius: var(--tile-border-radius);
+    box-shadow: 0 var(--tile-box-shadow-vertical-offset) var(--tile-box-shadow-radius) 0 var(--tile-box-shadow-color);
 }
 
 .word {
-    font-family: 'Oxygen' sans-serif;
-    font-size: 2.5vw;
+    --word-text-size: 2.8vw;
+    --word-font: 'Muli', sans-serif;
+    --word-width: 100%;
+
     text-align: center;
-    margin-bottom: 50%;
-    font-weight: bold;
+    font-size: var(--word-text-size);
+    font-family: var(--word-font);
+    width: var(--word-width);
 }

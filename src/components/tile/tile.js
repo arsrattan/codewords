@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './tile.module.css';
+import styleVars from '../../styles/globalStyles.json';
 
 export class Tile extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            lastColor: undefined,
-            colorShown: 'white'
+            lastColor: styleVars.neutralCardColor,
+            colorShown: styleVars.neutralCardColor
         }
         this.toggleColor = this.toggleColor.bind(this);
     }
@@ -16,13 +17,13 @@ export class Tile extends React.Component {
         if (newProps.spymasterSelected !== this.props.spymasterSelected) {
             if (newProps.spymasterSelected === true) {
                 this.setState({
-                    lastColor: 'white',
+                    lastColor: styleVars.neutralCardColor,
                     colorShown: this.props.color
                 });
             } else {
                 this.setState({
                     lastColor: this.props.color,
-                    colorShown: 'white'
+                    colorShown: styleVars.neutralCardColor
                 });
             }
         }
@@ -30,32 +31,32 @@ export class Tile extends React.Component {
 
     toggleColor() {
         if(this.props.spymasterSelected) {
-            if(this.state.colorShown === 'white') {
+            if(this.state.colorShown === styleVars.neutralCardColor) {
                 this.setState({
-                    lastColor: 'white',
+                    lastColor: styleVars.neutralCardColor,
                     colorShown: this.props.color
                 }, this.sendColorChangeToBoard);
-            } else if (this.state.colorShown === '#52AB6E') {
+            } else if (this.state.colorShown === styleVars.greenCardColor) {
                 this.setState({
-                    lastColor: '#52AB6E',
-                    colorShown: 'white'
+                    lastColor: styleVars.greenCardColor,
+                    colorShown: styleVars.neutralCardColor
                 }, this.sendColorChangeToBoard);
             } else {
                 this.setState({
                     lastColor: this.props.color,
-                    colorShown: '#52AB6E'
+                    colorShown: styleVars.greenCardColor
                 }, this.sendColorChangeToBoard);
             }
         } else {
-            if(this.state.colorShown === 'white') {
+            if(this.state.colorShown === styleVars.neutralCardColor) {
                 this.setState({
-                    lastColor: 'white',
+                    lastColor: styleVars.neutralCardColor,
                     colorShown: this.props.color
                 }, this.sendColorChangeToBoard);
             } else {
                 this.setState({
                     lastColor: this.props.color,
-                    colorShown: 'white'
+                    colorShown: styleVars.neutralCardColor
                 }, this.sendColorChangeToBoard);
             }
         }
@@ -69,9 +70,11 @@ export class Tile extends React.Component {
 
     render() {
         return(
-            <div className={styles.tile} style={{backgroundColor: this.state.colorShown }} onClick={() => this.toggleColor()}>
-                <div className={styles.word}>
-                    {this.props.word}
+            <div className={styles.tileContainer}>
+                <div className={styles.tile} style={{backgroundColor: this.state.colorShown}} onClick={() => this.toggleColor()}>
+                    <div className={styles.word}>
+                        <span>{this.props.word}</span>
+                    </div>
                 </div>
             </div>
         )

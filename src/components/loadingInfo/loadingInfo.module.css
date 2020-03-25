@@ -1,0 +1,19 @@
+.loadingInfo {
+    text-align: center;
+    line-height: 1%;
+    font-family: 'Baloo Thambi 2', cursive;
+    margin-top: 10%;
+}
+
+.introText {
+    font-size: 2vw;
+}
+
+.headingText {
+    font-size: 4vw;
+}
+
+#appLoadingSpinner {
+    margin-top: 3px;
+    margin-bottom: 3%;
+}

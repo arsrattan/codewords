@@ -1,24 +1,58 @@
+.inputBox {
+    --gameid-input-width: calc(40% - 2ch);
+    --gameid-input-height: calc(100% - 1ch);
+    --gameid-border-radius: 4vw;
+    --gameid-border: solid grey 0.5ch;
+
+    float: left;
+    width: var(--gameid-input-width);
+    height: var(--gameid-input-height);
+    border-radius: var(--gameid-border-radius);
+    border: var(--gameid-border);
+}
+
 .input {
-    height: 6vw;
-    float: right;
-    margin-right: 2%;
-    border-radius: 19px;
-    border: 1px solid gray;
-    font-size: 4vw;
-    color: #404040;
-    padding-left: 2%;
-    padding-right: 2%;
+    --input-height: calc(100% - 0.2ch - 0.2ch);
+    --input-width: 95%;
+    --input-margin-top: calc(calc(100% - var(--input-height)) * 0.5);
+    --input-margin-left: calc(calc(100% - var(--input-width)) * 0.5);
+    --input-font: 'Muli', sans-serif;
+    --input-text-indent: 2%;
+    --input-border-radius: 4vw;
+
+    font-style: italic;
+    font-family: var(--input-font);
+    outline: none;
+    border: none;
+    text-indent: var(--input-text-indent);
+    width: var(--input-width);
+    height: var(--input-height);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border);
+    margin-left: var(--input-margin-left);
+    margin-top: var(--input-margin-top);
 }
 
-::placeholder {
-    font-size: 4vw;
-    color: #b5b5b5;
+@media screen and (min-width: 100px) {
+    .input {
+        --input-text-size: 5vw;
+
+        font-size: var(--input-text-size);
+    }
 }
 
-.input:hover::placeholder {
-    color: #404040;
+@media screen and (min-width: 400px) {
+    .input {
+        --input-text-size: 4vw;
+
+        font-size: var(--input-text-size);
+    }
 }
 
-.input:focus::placeholder {
-    color: #404040;
+@media screen and (min-width: 400px) {
+    .input {
+        --input-text-size: 3vw;
+
+        font-size: var(--input-text-size);
+    }
 }

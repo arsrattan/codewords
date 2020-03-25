@@ -5,35 +5,24 @@ export class GameForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            value: ''
-        }
-        this.handleChange = this.handleChange.bind(this);
-        this.refreshBoard = this.refreshBoard.bind(this);
+        this.isAlphabeticOrEmpty = this.isAlphabeticOrEmpty.bind(this);
     }
 
-    handleChange(event) {
-        if (/^[a-zA-Z]+$/.test(event.target.value) === true || event.target.value === '') {
-            this.setState({
-                value: event.target.value
-            }, this.refreshBoard);
+    isAlphabeticOrEmpty(value) {
+        if (/^[a-zA-Z]+$/.test(value) || value === '') {
+            return true;
         }
-    }
-
-    refreshBoard() {
-        if (this.state.value === '') {
-            this.props.handleGameIdChange(this.props.startingWord);
-        } else {
-            this.props.handleGameIdChange(this.state.value)
-        }
+        return false;
     }
 
     render() {
         return(
-            <div>            
-                <form>
-                    <input type="text" className={styles.input} placeholder={this.props.startingWord} maxLength="15" onChange={this.handleChange} value={this.state.value}/>
-                </form>
+            <div className={styles.inputBox}>            
+                <input type="text" className={styles.input} maxLength="15" onChange={(e) => {
+                    if(this.isAlphabeticOrEmpty(e.target.value)) {
+                        this.props.gameIdChanged(e.target.value);
+                    }
+                }} value={this.props.gameId}/>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './spymasterButton.module.css';
+import styleVars from '../../styles/globalStyles.json';
 
 export class SpymasterButton extends React.Component {
 
@@ -26,18 +27,18 @@ export class SpymasterButton extends React.Component {
     }
 
     getBackgroundColor() {
-        return this.state.clicked === true ? '#4f7567' : this.state.hovering ? 'grey' : 'white';
+        return this.state.clicked === true ? styleVars.spymasterButtonSelectedColor : this.state.hovering ? styleVars.spymasterButtonHoveringColor : styleVars.spymasterButtonColor;
     }
 
     getTextColor() {
-        return (this.state.clicked === true || this.state.hovering === true) ? 'white' : 'black';
+        return (this.state.clicked === true || this.state.hovering === true) ? styleVars.spymasterButtonSelectedTextColor : styleVars.spymasterButtonTextColor;
     }
 
     render() {
         return(
             <div className={styles.button} style={{backgroundColor: this.getBackgroundColor(), color: this.getTextColor()}} onClick={() => { this.props.onClick(); this.buttonClickedColorChange(); }} onMouseOver={() => this.buttonHoverColorChange()} onMouseLeave={() => this.buttonHoverColorChange()}>
                 <div className={styles.buttonText}>
-                    {this.props.text}
+                    SpyMaster
                 </div>
             </div>
         )
