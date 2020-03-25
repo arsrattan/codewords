@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/codewords/static/css/main.057e438a.chunk.css",
+    "main.css": "/codewords/static/css/main.8f6d5030.chunk.css",
     "main.js": "/codewords/static/js/main.bba3f01e.chunk.js",
     "main.js.map": "/codewords/static/js/main.bba3f01e.chunk.js.map",
     "runtime-main.js": "/codewords/static/js/runtime-main.f75f515a.js",
@@ -8,15 +8,15 @@
     "static/js/2.6e30b7ec.chunk.js": "/codewords/static/js/2.6e30b7ec.chunk.js",
     "static/js/2.6e30b7ec.chunk.js.map": "/codewords/static/js/2.6e30b7ec.chunk.js.map",
     "index.html": "/codewords/index.html",
-    "precache-manifest.678f0358b5caac9a8172ed99834d518d.js": "/codewords/precache-manifest.678f0358b5caac9a8172ed99834d518d.js",
+    "precache-manifest.c9ad7a01de6a356e6add878a026fd2e6.js": "/codewords/precache-manifest.c9ad7a01de6a356e6add878a026fd2e6.js",
     "service-worker.js": "/codewords/service-worker.js",
-    "static/css/main.057e438a.chunk.css.map": "/codewords/static/css/main.057e438a.chunk.css.map",
+    "static/css/main.8f6d5030.chunk.css.map": "/codewords/static/css/main.8f6d5030.chunk.css.map",
     "static/js/2.6e30b7ec.chunk.js.LICENSE.txt": "/codewords/static/js/2.6e30b7ec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f75f515a.js",
     "static/js/2.6e30b7ec.chunk.js",
-    "static/css/main.057e438a.chunk.css",
+    "static/css/main.8f6d5030.chunk.css",
     "static/js/main.bba3f01e.chunk.js"
   ]
 }
