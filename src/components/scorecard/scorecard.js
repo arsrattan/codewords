@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './scorecard.module.css';
 
-export class Scorecard extends React.Component {
+export class Scorecard extends React.PureComponent {
 
     render() {
         return(

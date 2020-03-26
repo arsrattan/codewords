@@ -6,6 +6,7 @@
   "author": "Anmol Rattan <arsrattan@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
     "aws-sdk": "^2.644.0",
     "bluebird": "^3.7.2",
     "config": "^3.3.0",

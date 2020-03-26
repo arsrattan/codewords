@@ -1,5 +1,5 @@
 .button {
-    --spymaster-button-width: 25%;
+    --spymaster-button-width: 15%;
     --spymaster-button-height: calc(100% - 0.5ch - 0.5ch);
     --spymaster-button-border-radius: 4ch;
     --spymaster-border: solid grey 0.5ch;

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './tile.module.css';
 import styleVars from '../../styles/globalStyles.json';
 
-export class Tile extends React.Component {
+export class Tile extends React.PureComponent {
 
     constructor(props) {
         super(props);

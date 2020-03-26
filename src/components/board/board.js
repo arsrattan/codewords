@@ -7,8 +7,10 @@ import { GameForm } from '../gameform/gameform';
 import { generateBoardSetup } from '../../services/gameLoader';
 import { LoadingInfo } from '../loadingInfo/loadingInfo';
 import styleVars from '../../styles/globalStyles.json'
+import { DictionaryMenu } from '../dictionaryMenu/dictionaryMenu';
+import { AppBarHeader } from '../appBar/appBar';
 
-export class Board extends React.Component {
+export class Board extends React.PureComponent {
 
     static TOTAL_PLAYER_CARDS = 17;
 
@@ -108,10 +110,13 @@ export class Board extends React.Component {
 
         const renderHeader = () => {
             return (
+                <AppBarHeader />
+            )
+            return (
                 <div className={styles.boardHeader}>
                     {renderScoreboard()}
-                    <SpymasterButton onClick={() => this.showAllColors()}/>
                     <GameForm gameId={this.state.gameId} gameIdChanged={async (newGameId) => await this.updateBoard(newGameId)}/>
+                    <SpymasterButton onClick={() => this.showAllColors()}/>
                 </div>
             )
         }
@@ -163,7 +168,6 @@ export class Board extends React.Component {
             return (
                 <div className={styles.board}>
                     {renderHeader()}
-                    <hr />
                     {renderGametiles()}
                 </div>
             )

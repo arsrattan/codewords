@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './gameform.module.css';
 
-export class GameForm extends React.Component {
+export class GameForm extends React.PureComponent {
 
     constructor(props) {
         super(props);

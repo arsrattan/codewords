@@ -1,5 +1,5 @@
 .inputBox {
-    --gameid-input-width: calc(40% - 2ch);
+    --gameid-input-width: calc(50% - 2ch);
     --gameid-input-height: calc(100% - 1ch);
     --gameid-border-radius: 4vw;
     --gameid-border: solid grey 0.5ch;
@@ -19,8 +19,10 @@
     --input-font: 'Muli', sans-serif;
     --input-text-indent: 2%;
     --input-border-radius: 4vw;
+    --input-padding: 0px;
 
     font-style: italic;
+    padding: var(--input-padding);
     font-family: var(--input-font);
     outline: none;
     border: none;

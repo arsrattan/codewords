@@ -41,7 +41,7 @@
 }
 
 .scoreboard {
-    --scoreboard-width: 35%;
+    --scoreboard-width: 15%;
     --scoreboard-height: 100%;
 
     float: left;
