@@ -1,11 +1,15 @@
 {
+    "neutralCardColor": "white",
     "blueCardColor": "#83B1DE",
     "redCardColor": "#F37472",
     "yellowCardColor": "#E8E889",
     "greenCardColor": "#52AB6E",
+    "endgameCardColor": "grey",
     "spymasterButtonSelectedColor": "#4f7567",
     "spymasterButtonHoveringColor": "grey",
     "spymasterButtonColor": "white",
     "spymasterButtonTextColor": "black",
-    "spymasterButtonSelectedTextColor": "white"
+    "spymasterButtonSelectedTextColor": "white",
+    "spinnerSize": "15%",
+    "gameIdMaxLength": "15"
 }

@@ -17,7 +17,6 @@
 .buttonText {
     --spymaster-button-font: 'Muli', sans-serif;
 
-    font-family: var(--spymaster-button-font);
     font-weight: bold;
 }
 
