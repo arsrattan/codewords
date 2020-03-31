@@ -1,36 +1,32 @@
 import React from 'react';
 import './App.css';
-import { Board } from './components/board/board';
-import { getWords } from './services/wordsClient';
-import { LoadingInfo } from './components/loadingInfo/loadingInfo';
+import Game from './components/game';
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+import blue from '@material-ui/core/colors/blue';
 
-class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#2b518a",
+    },
+    text: {
+      default: "#fff"
     }
-  }
+  },
+});
 
-  async componentWillMount() {
-    this.wordList = await getWords();
-    this.setState({
-      loading: false
-    })
-  }
-
-  render() {
-    if(this.state.loading === true) {
-      return (
-        <LoadingInfo introText="Welcome To" headingText="Qodenames"/>
-      )
-    } else {
-      return (
-        <Board masterWordList={this.wordList}/>
-      )
-    }
-  }
+const App = props => {
+    return (
+      <React.Fragment key={"game"}>
+        <CssBaseline />
+        <ThemeProvider theme={theme}>
+          <Game />
+        </ThemeProvider>
+      </React.Fragment>
+    )
 }
 
-export default App;
+export default React.memo(App);

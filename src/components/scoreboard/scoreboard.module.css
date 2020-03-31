@@ -1,3 +1,15 @@
+.scoreboard {
+    --scoreboard-width: 15%;
+    --scoreboard-height: 50%;
+
+    border: solid brown 2px;
+    position: relative;
+    float: right;
+    margin-right: var(--scoreboard-margin-right);
+    width: var(--scoreboard-width);
+    height: var(--scoreboard-height);
+}
+
 .scorecard {
     --scorecard-width: calc(100% * 0.5);
     --scorecard-border-radius: 4ch;
@@ -11,16 +23,15 @@
 
 .scorecardText {
     --score-width: 100%;
-    --score-height: 100%;
+    --score-height: 50%;
     --score-font: 'Muli', sans-serif;
-    --score-font-size: 7ch;
+    --score-font-size: 1ch;
 
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: var(--score-font);
     font-size: var(--score-font-size);
     font-weight: bold;
     width: var(--score-width);

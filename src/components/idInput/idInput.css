@@ -23,7 +23,6 @@
 
     font-style: italic;
     padding: var(--input-padding);
-    font-family: var(--input-font);
     outline: none;
     border: none;
     text-indent: var(--input-text-indent);
